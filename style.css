@@ -43,7 +43,10 @@ main {
     margin-bottom: 50px;
     margin-left: 60px;
     padding: 10px;
+    margin: auto;
 }
+
+
 
 .contenedor{
     display: flex;
@@ -53,13 +56,15 @@ main {
 .texto{
     border: none;
     color: #050505;
-    margin-top: 90px;
+    margin-top: 80px;
     text-transform: lowercase;
+    resize: none;
+    width: 666px;
 }
 
 ::placeholder{
     color: #050505;
-text-transform:capitalize; 
+text-transform:initial; 
 }
 
 .texto:focus{
@@ -114,6 +119,7 @@ text-transform:capitalize;
     width: 383px;
     padding: 8px;
     border: none;
+    resize: none;
 }
 
 .resultado:focus{

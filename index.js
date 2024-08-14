@@ -65,12 +65,19 @@ function encriptar() {
       }
   }
 
-  function copiarTexto(){
+  function copiarTexto() {
     let texto = document.getElementById("resultado");
+
+    // Selecciona el texto en el elemento
     texto.select();
-    toastr.success("¡Texto copiado con exito!");
-   
-  }
+    texto.setSelectionRange(0, 99999);
+
+    // Copia el texto al portapapeles
+    navigator.clipboard.writeText(texto.value)
+        .then(() => {
+            toastr.success("¡Texto copiado con éxito!");
+        });
+} 
 
 
   
