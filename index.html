@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,56 +9,55 @@
     <script src="https://kit.fontawesome.com/c21e2c2f2d.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
     <title>Encriptador de texto</title>
 </head>
+
 <body>
-    
-<header class="logo">
+
+    <header class="logo">
         <img src="assets/imagenes/Logo.png" alt="logo de alura">
         <h1>Encriptador de texto</h1>
-</header>
-<main>
-    <div  class="contenedor">
-    <section>
-<textarea 
-name="texto"
-class="texto" 
-cols="30" 
-rows="10" 
- id="texto" 
- placeholder="Ingresa tu texto aquí.">
+    </header>
+    <main>
+        <div class="contenedor">
+            <section>
+                <textarea name="texto" class="texto" cols="30" rows="10" id="texto"
+                    placeholder="Ingresa tu texto aquí.">
 </textarea>
-<div class="informacion">
-    <h6 ><i class="fa-solid fa-circle-info"></i> Solo letras minusculas y sin acentos.</h6>
-</div>
+                <div class="informacion">
+                    <h6><i class="fa-solid fa-circle-info"></i> Solo letras minusculas y sin acentos.</h6>
+                </div>
 
-<div class="botones">
-    <button class="btn-cifrador" type="button" onclick="encriptar()">Encriptar</button>
-    <button class="btn-descifrador" type="button" onclick="desencriptar()" id="descencriptar">Desencriptar</button>
-</div>
-    </section>
+                <div class="botones">
+                    <button class="btn-cifrador" type="button" onclick="encriptar()">Encriptar</button>
+                    <button class="btn-descifrador" type="button" onclick="desencriptar()"
+                        id="descencriptar">Desencriptar</button>
+                </div>
+            </section>
 
-    <section class="contenedor-mensaje">
-    <div class="mensaje">
-        <img src="assets/imagenes/Muñeco.png" alt="" id="muñeco">
- <textarea class="resultado" name="resultado" cols="30" rows="10" id="resultado">
-            
-        </textarea> 
-        
-        <h2 id="titulo-mensaje">Ningún mensaje fue encontrado</h2>
-        <p id="parrafo">Ingresa el texto que deseas encriptar o descencriptar</p>
-    </div>
-        
-        <div class="contenedor-btn">
-            <button class="btn-copiar" onclick="copiarTexto()">Copiar</button>  
+            <section class="contenedor-mensaje">
+                <div class="mensaje">
+                    <img src="assets/imagenes/muñeco.png" alt="imagen principal" id="muñeco">
+                    <textarea class="resultado" name="resultado" cols="30" rows="10" id="resultado">
+
+        </textarea>
+
+                    <h2 id="titulo-mensaje">Ningún mensaje fue encontrado</h2>
+                    <p id="parrafo">Ingresa el texto que deseas encriptar o descencriptar</p>
+                </div>
+
+                <div class="contenedor-btn">
+                    <button class="btn-copiar" onclick="copiarTexto()">Copiar</button>
+                </div>
+
+            </section>
         </div>
-
-    </section></div>
-    <footer class="pie-de-pagina">
-        <p>© 2024 Melisa Fernández. Todos los derechos reservados.</p>
-    </footer>
+        <footer class="pie-de-pagina">
+            <p>© 2024 Melisa Fernández. Todos los derechos reservados.</p>
+        </footer>
 </body>
 
 <script src="index.js"></script>
+
 </html>

@@ -17,7 +17,7 @@ html, body {
 body {
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* Hace que el contenedor ocupe toda la altura de la ventana */
+    min-height: 100vh;
 }
  
 .logo{
@@ -37,6 +37,7 @@ body {
     color: #090909;
     text-decoration: underline;
 }
+
 main {
     flex: 1;
     margin-bottom: 50px;
@@ -62,8 +63,7 @@ text-transform:capitalize;
 }
 
 .texto:focus{
-    outline: none;
-    
+    outline: none;   
 }
 
 .contenedor-mensaje{
@@ -73,8 +73,7 @@ text-transform:capitalize;
   justify-content: center;
   border-radius: 30px;
   width: 400px;
-  padding: 2px;
-    
+  padding: 2px;  
 }
 
 .mensaje{
@@ -159,11 +158,11 @@ text-transform:capitalize;
     background-color: #c6ccd5;
 }
 
-
 .contenedor-btn{
     background: transparent;
     padding: 8px;
 }
+
 .btn-copiar{
     border: 1px solid #FF725E;
     border-radius: 24px;
@@ -188,7 +187,6 @@ text-transform:capitalize;
     font-family: 'Arial', sans-serif;
 }
 
-
 .toast {
     background-color: #444444;
     color: #fff;
@@ -201,17 +199,16 @@ text-transform:capitalize;
 
 /* Estilos específicos para las notificaciones de tipo warning */
 .toast-warning {
-    background-color: #f1d278 !important; /* Amarillo para la advertencia */
-    color: #000 !important; /* Texto en negro */
-    border: 1px solid #FFA000; /* Borde más oscuro */
+    background-color: #f1d278 !important; 
+    color: #000 !important; 
+    border: 1px solid #FFA000; 
 }
 
 /* Estilo para el título de la notificación */
 .toast-warning .toast-title {
     font-weight: bold;
     font-size: 18px;
-    background-color:#f1d278 !important;
-   
+    background-color:#f1d278 !important;  
 }
 
 /* Estilo para el cuerpo del mensaje */
@@ -227,7 +224,6 @@ text-transform:capitalize;
 }
 
 /*Estilo especificos para las notificaciones de tipo success*/
-
 .toast-success {
     background-color: rgb(109, 237, 109) !important ;
     color: #000 !important;
@@ -249,13 +245,14 @@ text-transform:capitalize;
 
 /* Estilos para el botón de cierre */
 .toast-success .toast-close-button {
-    color: #000; /* Color del botón de cierre */
-    opacity: 1; /* Hacer que el botón sea totalmente opaco */
+    color: #000; 
+    opacity: 1;
 }
 
 /*tablets*/
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) 
 and (orientation : landscape) {
+
     .logo img{
         height: 50px;
     } 
@@ -263,9 +260,9 @@ and (orientation : landscape) {
     .logo h1{
        font-size: 28px; 
     }
+
      main{
-        margin-left: 0;
-        
+        margin-left: 0;  
      }
 
      .contenedor{
@@ -279,11 +276,10 @@ and (orientation : landscape) {
         text-align: center;
         height: 150px;
         width: 745px;
-
      } 
-      .informacion h6{
-     font-size: 16px;
-       
+
+     .informacion h6{
+     font-size: 16px; 
      }
 
      .botones{
@@ -300,8 +296,7 @@ and (orientation : landscape) {
      }
 
      .contenedor-mensaje{
-        width: 745px;
-        
+        width: 745px;   
      }
 
      .mensaje img{
@@ -319,14 +314,13 @@ and (orientation : landscape) {
      }
 
      .pie-de-pagina p{
-
         font-size: 18px;
-
      }
 }
 
 /*tablets*/
 @media (min-width: 481px) and (max-width: 767px) {
+
     .logo img{
         height: 40px;
     } 
@@ -334,9 +328,9 @@ and (orientation : landscape) {
     .logo h1{
        font-size: 25px; 
     }
+
      main{
-        margin-left: 0;
-        
+        margin-left: 0;    
      }
 
      .contenedor{
@@ -349,11 +343,10 @@ and (orientation : landscape) {
      .texto{
         text-align: center;
         height: 150px;
+     }
 
-     } 
       .informacion h6{
-     font-size: 15px;
-       
+     font-size: 15px;  
      }
 
      .botones{
@@ -362,8 +355,7 @@ and (orientation : landscape) {
      }
 
      .contenedor-mensaje{
-        width: 660px;
-        
+        width: 660px;  
      }
 
      .mensaje img{
@@ -381,15 +373,12 @@ and (orientation : landscape) {
      }
 
      .pie-de-pagina p{
-
         font-size: 12px;
-
      }
 
   }
 /* smartphones*/
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
-    
 
     .logo img{
         height: 40px;
@@ -398,9 +387,9 @@ and (orientation : landscape) {
     .logo h1{
        font-size: 20px; 
     }
+
      main{
-        margin-left: 0;
-        
+        margin-left: 0;    
      }
 
      .contenedor{
@@ -414,11 +403,10 @@ and (orientation : landscape) {
         text-align: center;
         height: 150px;
         width: 300px;
-
      } 
+
       .informacion h6{
-     font-size: 12px;
-       
+     font-size: 12px;  
      }
 
      .botones{
@@ -453,10 +441,7 @@ and (orientation : landscape) {
      }
 
      .pie-de-pagina p{
-
         font-size: 12px;
-
      }
-
 
   }

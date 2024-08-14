@@ -13,8 +13,8 @@ function encriptar() {
         "closeButton": true,
         "newestOnTop": false,
         "positionClass": 'toast-top-center',
-        "timeOut": "5000", // Duración de la notificación
-        "extendedTimeOut": "1000", // Tiempo extra si se pasa el mouse por encima
+        "timeOut": "5000", 
+        "extendedTimeOut": "1000", 
     };
 
     //encriptacion del texto
