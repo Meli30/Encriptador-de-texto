@@ -1,5 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
 *{
-    background: #f2c4bd ;
     font-family: monospace;
     font-weight: 400;
     line-height: 48px;
@@ -15,16 +16,25 @@ html, body {
 }
 
 body {
+    background:#f2c4bd;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
- 
+
+main {
+    flex: 1;
+    margin-bottom: 50px;
+    margin-left: 60px;
+    padding: 10px;
+    margin: auto;
+}
+
 .logo{
- padding-top: 6px;
- margin-left: 10px;
- display: flex;
- align-items: center;
+   padding-top: 6px;
+   margin-left: 10px;
+   display: flex;
+   align-items: center;
 }
 
 .logo img{
@@ -38,22 +48,13 @@ body {
     text-decoration: underline;
 }
 
-main {
-    flex: 1;
-    margin-bottom: 50px;
-    margin-left: 60px;
-    padding: 10px;
-    margin: auto;
-}
-
-
-
 .contenedor{
     display: flex;
-     gap: 100px;
+    gap: 100px;
 }
 
 .texto{
+    background: #f2c4bd;
     border: none;
     color: #050505;
     margin-top: 80px;
@@ -64,7 +65,7 @@ main {
 
 ::placeholder{
     color: #050505;
-text-transform:initial; 
+    text-transform:initial; 
 }
 
 .texto:focus{
@@ -72,13 +73,13 @@ text-transform:initial;
 }
 
 .contenedor-mensaje{
-  background: #eff1f4;  
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  border-radius: 30px;
-  width: 400px;
-  padding: 2px;  
+    background: #eff1f4;  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 30px;
+    width: 400px;
+    padding: 2px;  
 }
 
 .mensaje{
@@ -97,6 +98,7 @@ text-transform:initial;
     height: 250px;
     width: 300px;
 }
+
 .mensaje h2{
     background-color: #eff1f4;
     color: #050505;
@@ -127,12 +129,10 @@ text-transform:initial;
     border: none;
 }
 
-
 .botones{
     display: flex;
     margin-top: 18px;
-    gap: 10px;
- 
+    gap: 10px; 
 }
 
 .btn-cifrador{
@@ -178,6 +178,10 @@ text-transform:initial;
     width: 380px;
 }
 
+.btn-copiar:hover{
+    background-color: #fa8171;
+}
+
 .informacion h6{
     color: #050505;
     font-size: 15px;
@@ -192,99 +196,132 @@ text-transform:initial;
     font-family: 'Arial', sans-serif;
 }
 
-.toast {
-    background-color: #444444;
-    color: #fff;
-    border-radius: 8px;
-    font-family: 'Arial', sans-serif;
-    font-size: 16px;
-    padding: 15px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+/* Estilo personalizado para la alerta */
+.mi-alerta {
+    background-color: #f8e8e6;
+    color: #333; 
+    border-radius:10px;
+    width: 450px;
 }
 
-/* Estilos específicos para las notificaciones de tipo warning */
-.toast-warning {
-    background-color: #f1d278 !important; 
-    color: #000 !important; 
-    border: 1px solid #FFA000; 
+.titulo-alerta {
+    background-color: #f8e8e6;
+    color: #333; 
+    border: none;
+   
 }
 
-/* Estilo para el título de la notificación */
-.toast-warning .toast-title {
-    font-weight: bold;
+.boton-cerrar {
+    background: linear-gradient(45deg, #ff725e, #ff9580);
+    color: #faf7f7;
     font-size: 18px;
-    background-color:#f1d278 !important;  
+    border-radius: 20%;
+    padding: 5px;
+    margin: 10px;
+    transition: 0.3s;
 }
 
-/* Estilo para el cuerpo del mensaje */
-.toast-warning .toast-message {
-    font-size: 14px;
-    background-color:#f1d278 !important;  color: #000;
-}
-
-/* Estilos para el botón de cierre */
-.toast-warning .toast-close-button {
-    color: #000; /* Color del botón de cierre */
-    opacity: 1; /* Hacer que el botón sea totalmente opaco */
-}
-
-/*Estilo especificos para las notificaciones de tipo success*/
-.toast-success {
-    background-color: rgb(109, 237, 109) !important ;
-    color: #000 !important;
-    border: 1px solid rgb(6, 133, 6);
-}
-
-/* Estilo para el título de la notificación */
-.toast-success .toast-title {
-    font-weight: bold;
+.boton-cerrar:hover {
+    background: linear-gradient(45deg, #ff725e, #ff9580);
+    color: #faf7f7;
     font-size: 18px;
-    background-color: rgb(109, 237, 109)!important;
+    border-radius: 20%;
+    padding: 5px;
+    margin: 10px;
+    transition: 0.3s;
 }
 
-/* Estilo para el cuerpo del mensaje */
-.toast-success .toast-message {
-    font-size: 14px;
-    background-color:rgb(109, 237, 109) !important; 
+.warning {
+    font-size: 10px;
+    background: red;
+    background-color: #fbf5f5;
+    border-radius: 50%;
+    padding: 35px;
+    border: none;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Estilos para el botón de cierre */
-.toast-success .toast-close-button {
-    color: #000; 
-    opacity: 1;
+.warning .swal2-icon-content{
+    font-size: 60px;
+    color: #e32222;
 }
+
+/*Estilo personalizado para el alerta de copiado*/
+.mi-alerta {
+    background-color: #f8e8e6;
+    color: #333; 
+    border-radius:10px;
+    width: 450px;
+}
+
+
+.boton-cerrar-success {
+    background: linear-gradient(45deg, #ff725e, #ff9580);
+    color: #faf7f7;
+    font-size: 18px;
+    border-radius: 20%;
+    padding: 5px;
+    margin: 10px;
+    transition: 0.3s;
+}
+
+.boton-cerrar-success:hover {
+    background: linear-gradient(45deg, #ff725e, #ff9580);
+    color: #faf7f7;
+    font-size: 18px;
+    border-radius: 20%;
+    padding: 5px;
+    margin: 10px;
+    transition: 0.3s;
+}
+
+.boton-continuar{
+    background: #ff725e;
+    border-radius: 20px;
+}
+
+.success {
+    font-size: 10px;
+    color: green;
+    border-radius: 50%;
+    padding: 35px;
+    border: none;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.success .swal2-icon-content{
+    font-size: 60px;
+    color: green;
+}
+
 
 /*tablets*/
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) 
 and (orientation : landscape) {
 
     .logo img{
-        height: 50px;
+       height: 50px;
     } 
     
     .logo h1{
        font-size: 28px; 
     }
 
-     main{
-        margin-left: 0;  
-     }
-
      .contenedor{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 50px;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       gap: 50px;
      }
     
      .texto{
-        text-align: center;
-        height: 150px;
-        width: 745px;
+       text-align: center;
+       height: 150px;
+       width: 745px;
      } 
 
      .informacion h6{
-     font-size: 16px; 
+       font-size: 16px; 
      }
 
      .botones{
@@ -331,55 +368,51 @@ and (orientation : landscape) {
     } 
     
     .logo h1{
-       font-size: 25px; 
+        font-size: 25px; 
     }
 
-     main{
-        margin-left: 0;    
-     }
-
-     .contenedor{
+    .contenedor{
         display: flex;
         flex-direction: column;
         text-align: center;
         gap: 50px;
-     }
+    }
     
-     .texto{
+    .texto{
         text-align: center;
         height: 150px;
-     }
+    }
 
-      .informacion h6{
-     font-size: 15px;  
-     }
+    .informacion h6{
+        font-size: 15px;  
+    }
 
-     .botones{
+    .botones{
         display: flex;
         gap: 5px;
-     }
+    }
 
-     .contenedor-mensaje{
+    .contenedor-mensaje{
         width: 660px;  
-     }
+    }
 
-     .mensaje img{
+    .mensaje img{
         display: none;
-     }
+    }
 
-     .resultado{
+    .resultado{
         width: 480px;
         height: 100px;
         margin-top: 25px;
-     }
+    }
 
-     .btn-copiar{
-        width: 445px;
-     }
+    .btn-copiar{
+        width: 100vmax;
+    }
 
-     .pie-de-pagina p{
+    .pie-de-pagina p{
         font-size: 12px;
-     }
+    }
 
   }
 /* smartphones*/
@@ -393,60 +426,56 @@ and (orientation : landscape) {
        font-size: 20px; 
     }
 
-     main{
-        margin-left: 0;    
-     }
-
-     .contenedor{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 50px;
-     }
+    .contenedor{
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       gap: 50px;
+    }
     
-     .texto{
+    .texto{
         text-align: center;
         height: 150px;
         width: 300px;
      } 
 
-      .informacion h6{
-     font-size: 12px;  
-     }
+    .informacion h6{
+       font-size: 12px;  
+    }
 
-     .botones{
+    .botones{
         display: flex;
         flex-direction: column;
         gap: 10px;
-     }
+    }
 
-     .btn-cifrador{
+    .btn-cifrador{
         width: 300px;
-     }
+    }
 
-     .btn-descifrador{
+    .btn-descifrador{
         width: 300px;
-     }
+    }
 
-     .contenedor-mensaje{
+    .contenedor-mensaje{
         width: 295px;
-     }
+    }
 
-     .mensaje img{
+    .mensaje img{
         display: none;
-     }
+    }
 
-     .resultado{
+    .resultado{
         width: 280px;
         margin-top: 50px;
-     }
+    }
 
-     .btn-copiar{
+    .btn-copiar{
         width: 280px;
-     }
+    }
 
-     .pie-de-pagina p{
+    .pie-de-pagina p{
         font-size: 12px;
-     }
+    }
 
   }

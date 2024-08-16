@@ -4,19 +4,6 @@ function encriptar() {
     let parrafo = document.getElementById("parrafo");
     let muñeco = document.getElementById("muñeco");
 
-    //configuracion de opciones de toastr
-    toastr.options = {
-        "showMethod": 'slideDown',
-        "hideMethod": 'slideUp',
-        "closeMethod": 'slideUp',
-        "preventDuplicates": true,
-        "closeButton": true,
-        "newestOnTop": false,
-        "positionClass": 'toast-top-center',
-        "timeOut": "5000", 
-        "extendedTimeOut": "1000", 
-    };
-
     //encriptacion del texto
     let textoCifrado = texto
       .replace(/e/gi, "enter")
@@ -34,10 +21,24 @@ function encriptar() {
       muñeco.src = "assets/imagenes/muñeco.png";
       tituloMensaje.textContent = "Ningún mensaje fue encontrado";
       parrafo.textContent = "Ingresa el texto que deseas encriptar o desencriptar";
-      toastr.warning("Debes ingresar un texto", "Ooops!");
-    }
-    }
-    
+      Swal.fire({
+        title: '¡Ooops!',
+        text: 'Debes ingresar un texto',
+        icon:'warning',
+        showCloseButton: true,
+        showConfirmButton: false,
+        color: 'black',
+        customClass: {
+        popup: 'mi-alerta', 
+        title: 'titulo-alerta',
+        closeButton:'boton-cerrar',
+        icon:'warning'
+      }
+      }); 
+
+  }
+
+}
   
   function desencriptar() {
     let texto = document.getElementById("texto").value;
@@ -75,9 +76,21 @@ function encriptar() {
     // Copia el texto al portapapeles
     navigator.clipboard.writeText(texto.value)
         .then(() => {
-            toastr.success("¡Texto copiado con éxito!");
-        });
-} 
+          Swal.fire({
+            title: '¡Éxito!',
+            text: 'Texto copiado correctamente',
+            showCloseButton: true,
+            showConfirmButton: true,
+            confirmButtonText: 'Continuar',
+            color: 'black',
+            customClass: {
+            popup: 'mi-alerta',
+            title: 'titulo-alerta', 
+            closeButton:'boton-cerrar-success',
+            confirmButton:'boton-continuar',
+          }
+          }); 
+}) }
 
 
   
